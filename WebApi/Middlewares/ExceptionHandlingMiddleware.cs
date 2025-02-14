@@ -57,6 +57,8 @@ namespace WebApi.Middlewares
             catch (Exception ex)
             {
 
+                sw.Stop();
+
                 string logStr = $"Request Method: {context.Request.Method} - Request Path: {context.Request.Path} - Request Body: {requestBody.Replace("\n ", "")}";
 
                 Console.WriteLine(logStr);
